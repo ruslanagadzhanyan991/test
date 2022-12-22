@@ -16,7 +16,7 @@ public class Limits : MonoBehaviour
 
     private void Update()
     {
-        if (streak >= 3) //if streak is 3 then limit is increases
+        if (streak == 3) //if streak is 3 then limit is increases
         {
             limits += addition;
             streak = 0;

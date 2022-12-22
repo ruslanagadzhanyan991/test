@@ -14,5 +14,7 @@ public class CameraManager : MonoBehaviour
         Vector3 desiredPosition = Target.position + offset;
         Vector3 smoothenedposition = Vector3.Lerp(cam.transform.position, desiredPosition, smoothspeed);
         cam.transform.position = smoothenedposition;
+
+        cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.LookRotation(Target.transform.position - cam.transform.position), Time.deltaTime);
     }
 }
